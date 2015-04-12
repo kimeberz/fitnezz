@@ -1,3 +1,230 @@
 body {
-  background: lightblue;
+	max-width: 1250px;
+	background-color: #F8F8F8;
+	margin-left: auto;
+	margin-right: auto;
+	color: #6D7C8A;
+	font-family: HelveticaNeue-Light;
+	font-weight: lighter;
+
 }
+
+.container {
+	max-width: 1250px !important;
+}
+
+.row {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.icon {
+	padding: 20px;
+}
+
+.fa-bed {
+	color: #2185C5;
+}
+
+.fa-heartbeat {
+	color: #FF434C;
+}
+
+.fa-bicycle {
+	color: #00A79D;
+}
+
+.fa-dashboard {
+	color: #A7C9E0;
+}
+
+.fa-flash {
+	color: #F1C148;
+}
+
+.fa-bomb {
+	color: #B31612;
+}
+
+.run {
+	color: ;
+}
+
+.profile-top {
+	padding-bottom: 30px;
+	margin-top: 30px;
+}
+
+.profile {
+	font-size: 2em;
+	font-family: HelveticaNeue-Light;
+	float: left;
+
+}
+
+.loc {
+	margin-top: 5px;
+	font-size: .7em
+}
+
+.profile-pic {
+  border-radius: 50%;
+  text-align: right;
+
+}
+
+.run-panel {
+	border: 2px solid #E0E4E5;
+	background-color: white;
+	border-radius: 3px;
+	margin: 30px 10px 30px 10px;
+	/*padding: 20px;*/
+
+}
+
+.panel-title {
+	border-bottom: 2px solid #A7C9E0;
+	font-size: 1.4em;
+	text-decoration: uppercase;
+	padding: 10px 20px 10px 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+
+.count {
+	font-size: 1.7em;
+	padding: 10px 20px 10px 20px;
+}
+
+.miles {
+	font-size: 1.7em;
+	padding: 10px 20px 10px 20px;
+}
+
+.fitbit {
+	background-color: #3EA3A6;
+	font-size: 1.6em;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px 0px 20px 0px;
+
+}
+
+.strava {
+	background-color: #FC4C02;
+	font-size: 1.6em;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px 0px 20px 0px;
+}
+
+
+.sml-title {
+    text-align: center;
+    position: relative;
+    font-size: 1.5em;
+	margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+span {
+    display: inline-block;    
+}
+span:before,
+span:after {
+    border-top: 1px solid #D4D9D9;
+    display: block;
+    height: 1px;
+    content: " ";
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: .8em;
+}
+span:after {
+   right: 0;  
+   left: auto; 
+}
+
+.animated {
+	duration: 10000 !important;
+}
+
+.pop {
+  visibility:hidden;
+}
+
+i {
+  color: #6D7C8A;
+  font-family: weather;
+  font-size: 60px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
