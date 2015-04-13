@@ -29,14 +29,14 @@
 			<div class="col-md-4">
 				<div class="profile">
 					<div class="name">{{athlete.firstname}} {{athlete.lastname}}</div>
-					<div class="loc">San Francisco, CA</div>
+					<div class="loc">{{athlete.city}}, {{athlete.state}}</div>
 					<div id="weather"><i class="fa fa-wheelchair fa-spin"></i></div>
 				</div>
 			</div>
 			
 			<div class="col-md-8">
 				<div class="profile-pic">
-					<img alt="Kimberly Eberz" class="profile-pic" src="https://dgalywyr863hv.cloudfront.net/pictures/athletes/164024/52678/1/large.jpg" title="Kimberly Eberz">
+					<img alt="Kimberly Eberz" class="profile-pic" src="{{athlete.profile}}" title="Kimberly Eberz">
 				</div>
 			</div>
 			
@@ -64,7 +64,7 @@
 							</div>
 							<div class="col-md-8">
 								<div class="count">2 Runs</div>
-								<div class="miles">11 Miles</div>
+								<div class="miles">{{athlete.all_run_totals}}</div>
 							</div>
 						</div>
 					</div>
@@ -95,8 +95,8 @@
 								<i class="fa fa-flash fa-4x"></i>
 							</div>
 							<div class="col-md-8">
-								<div class="count">287 Runs</div>
-								<div class="miles">1,463 Miles</div>
+								<div class="count">{{athlete.ytd_run_totals.count}}</div>
+								<div class="miles">{{athlete.ytd_run_totals.count}}</div>
 							</div>
 						</div>
 					</div>

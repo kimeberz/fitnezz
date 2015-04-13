@@ -20,6 +20,7 @@ def index():
 
     client = Client(access_token=access_token)
     athlete = client.get_athlete()
+
     return render_template('index.html', athlete=athlete)
 
 
