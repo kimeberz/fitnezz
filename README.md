@@ -4,5 +4,5 @@ Simple Flask app for Heroku.
 ```bash
 make  # set up virtual env
 . env/bin/activate  # activate env
-./app.py  # start dev server
+make run  # start dev server
 ```
