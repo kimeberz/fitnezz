@@ -56,15 +56,15 @@
 
 				<!-- This weeks runs -->
 				<div class="pop animated run-panel">
-					<div class="panel-title">This Week</div>
+					<div class="panel-title">Recent Runs</div>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="pull-left icon run col-md-4">
 								<i class="fa fa-dashboard fa-4x"></i>
 							</div>
 							<div class="col-md-8">
-								<div class="count">2 Runs</div>
-								<div class="miles">{{athlete.all_run_totals}}</div>
+								<div class="count">{{stats.run_count}} Runs</div>
+								<div class="miles">{{stats.run_distance}} Miles</div>
 							</div>
 						</div>
 					</div>
@@ -72,15 +72,15 @@
 
 				<!-- This months runs -->
 				<div  class="animated pop run-panel">
-					<div class="panel-title">This Month</div>
+					<div class="panel-title">This Year</div>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="pull-left icon col-md-4">
 								<i class="fa fa-dashboard fa-4x"></i>
 							</div>
 							<div class="col-md-8">
-								<div class="count">7 Runs</div>
-								<div class="miles">47 Miles</div>
+								<div class="count">{{stats.run_count_ytd}} Runs</div>
+								<div class="miles">{{stats.run_distance_ytd}} Miles</div>
 							</div>
 						</div>
 					</div>
@@ -95,8 +95,8 @@
 								<i class="fa fa-flash fa-4x"></i>
 							</div>
 							<div class="col-md-8">
-								<div class="count">{{athlete.ytd_run_totals.count}}</div>
-								<div class="miles">{{athlete.ytd_run_totals.count}}</div>
+								<div class="count">{{stats.run_count_all}} Runs</div>
+								<div class="miles">{{stats.run_distance_all}} Miles</div>
 							</div>
 						</div>
 					</div>
@@ -110,15 +110,15 @@
 				<div class="sml-title"><span>Cycling</span></div>
 				<!-- This weeks rides -->
 				<div  class="animated pop run-panel">
-					<div class="panel-title">This Week</div>
+					<div class="panel-title">Recent Rides</div>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="pull-left icon col-md-4">
 								<i class="fa fa-bicycle fa-4x"></i>
 							</div>
 							<div class="col-md-8">
-								<div class="count">2 Rides</div>
-								<div class="miles">63 Miles</div>
+								<div class="count">{{stats.ride_count}} Rides</div>
+								<div class="miles">{{stats.ride_distance}} Miles</div>
 							</div>
 						</div>
 					</div>
@@ -126,15 +126,15 @@
 
 				<!-- This months rides -->
 				<div  class="animated pop run-panel">
-					<div class="panel-title">This Month</div>
+					<div class="panel-title">This Year</div>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="pull-left icon col-md-4">
 								<i class="fa fa-bicycle fa-4x"></i>
 							</div>
 							<div class="col-md-8">
-								<div class="count">4 Rides</div>
-								<div class="miles">310 Miles</div>
+								<div class="count">{{stats.ride_count_ytd}} Rides</div>
+								<div class="miles">{{stats.ride_distance_ytd}} Miles</div>
 							</div>
 						</div>
 					</div>
@@ -149,8 +149,8 @@
 								<i class="fa fa-bomb fa-4x"></i>
 							</div>
 							<div class="col-md-8">
-								<div class="count">101 Rides</div>
-								<div class="miles">1,036 Miles</div>
+								<div class="count">{{stats.ride_count_all}} Rides</div>
+								<div class="miles">{{stats.ride_distance_all}} Miles</div>
 							</div>
 						</div>
 					</div>

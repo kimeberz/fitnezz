@@ -19,9 +19,34 @@ def index():
         return redirect(url_for('login'))
 
     client = Client(access_token=access_token)
-    athlete = client.get_athlete()
+    athlete = client.get_athlete() # client.protocol.get('/athletes/your_id')
+    athlete_id = athlete.id
+    # bo = 'hi'
+    # kim = 'yo'
+    # c = bo + kim
+    stats_m = client.protocol.get('/athletes/' + str(athlete_id) + '/stats')
 
-    return render_template('index.html', athlete=athlete)
+    stats_mi = {
+        'run_distance': m_to_mi(stats_m['recent_run_totals']['distance']),
+        'run_count': stats_m['recent_run_totals']['count'],
+        'run_distance_ytd': m_to_mi(stats_m['ytd_run_totals']['distance']),
+        'run_count_ytd': stats_m['ytd_run_totals']['count'],
+        'run_distance_all': m_to_mi(stats_m['all_run_totals']['distance']),
+        'run_count_all': stats_m['all_run_totals']['count'],
+        'ride_distance': m_to_mi(stats_m['recent_ride_totals']['distance']),
+        'ride_count': stats_m['recent_ride_totals']['count'],
+        'ride_distance_ytd': m_to_mi(stats_m['ytd_ride_totals']['distance']),
+        'ride_count_ytd': stats_m['ytd_ride_totals']['count'],
+        'ride_distance_all': m_to_mi(stats_m['all_ride_totals']['distance']),
+        'ride_count_all': stats_m['all_ride_totals']['count']
+    }
+    # raise Exception(stats_mi['run_distance'])
+
+    return render_template('index.html', athlete=athlete, stats=stats_mi, athlete_id=athlete)
+
+
+def m_to_mi(m):
+    return round(m * 0.000621371 ,2)
 
 
 @app.route('/login')
