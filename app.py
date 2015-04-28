@@ -29,16 +29,28 @@ def index():
     stats_mi = {
         'run_distance': m_to_mi(stats_m['recent_run_totals']['distance']),
         'run_count': stats_m['recent_run_totals']['count'],
+        'run_elevation': stats_m['recent_run_totals']['elevation_gain'],
+        'run_pace': average_pace(stats_m['recent_run_totals']['distance'], stats_m['recent_run_totals']['moving_time']),
         'run_distance_ytd': m_to_mi(stats_m['ytd_run_totals']['distance']),
         'run_count_ytd': stats_m['ytd_run_totals']['count'],
+        'run_elevation_ytd': stats_m['ytd_run_totals']['elevation_gain'],
+        'run_pace_ytd': average_pace(stats_m['ytd_run_totals']['distance'], stats_m['ytd_run_totals']['moving_time']),
         'run_distance_all': m_to_mi(stats_m['all_run_totals']['distance']),
         'run_count_all': stats_m['all_run_totals']['count'],
+        'run_elevation_all': stats_m['all_run_totals']['elevation_gain'],
+        'run_pace_all': average_pace(stats_m['all_run_totals']['distance'], stats_m['all_run_totals']['moving_time']),
         'ride_distance': m_to_mi(stats_m['recent_ride_totals']['distance']),
         'ride_count': stats_m['recent_ride_totals']['count'],
+        'ride_elevation': stats_m['recent_ride_totals']['elevation_gain'],
+        'ride_speed': average_mph(stats_m['recent_ride_totals']['distance'], stats_m['recent_ride_totals']['moving_time']),
         'ride_distance_ytd': m_to_mi(stats_m['ytd_ride_totals']['distance']),
         'ride_count_ytd': stats_m['ytd_ride_totals']['count'],
+        'ride_elevation_ytd': stats_m['ytd_ride_totals']['elevation_gain'],
+        'ride_speed_ytd': average_mph(stats_m['ytd_ride_totals']['distance'], stats_m['ytd_ride_totals']['moving_time']),
         'ride_distance_all': m_to_mi(stats_m['all_ride_totals']['distance']),
-        'ride_count_all': stats_m['all_ride_totals']['count']
+        'ride_count_all': stats_m['all_ride_totals']['count'],
+        'ride_elevation_all': stats_m['all_ride_totals']['elevation_gain'],
+        'ride_speed_all': average_mph(stats_m['all_ride_totals']['distance'], stats_m['all_ride_totals']['moving_time']),
     }
     # raise Exception(stats_mi['run_distance'])
 
@@ -48,6 +60,29 @@ def index():
 def m_to_mi(m):
     return round(m * 0.000621371 ,2)
 
+def sec_to_min(sec):
+    if sec == 0:
+        return 0
+    return round(sec / 60 ,2)
+
+def sec_to_hr(sec):
+    if sec == 0:
+        return 0
+    return round(sec_to_min(sec) / 60 ,2)
+
+def average_pace(meters, seconds):
+    miles = m_to_mi(meters)
+    minutes = sec_to_min(seconds)
+    if miles + minutes == 0:
+        return 0
+    return round(minutes / miles, 2)
+
+def average_mph(meters, seconds):
+    miles = m_to_mi(meters)
+    hours = sec_to_hr(seconds)
+    if miles + hours == 0:
+        return 0
+    return round(miles / hours ,2)
 
 @app.route('/login')
 def login():
@@ -65,8 +100,8 @@ def oauth_authorized():
     client = Client()
     code = request.args.get('code')
     access_token = client.exchange_code_for_token(
-        client_id=CLIENT_ID, 
-        client_secret=CLIENT_SECRET, 
+        client_id=CLIENT_ID,
+        client_secret=CLIENT_SECRET,
         code=code)
     session['access_token'] = access_token
     return redirect(url_for('index'))

@@ -23,7 +23,7 @@
 
 	<!-- container -->
 	<div class="container row">
-		
+
 		<!-- profile top -->
 		<div class="profile-top row">
 			<div class="col-md-4">
@@ -33,23 +33,23 @@
 					<div id="weather"><i class="fa fa-wheelchair fa-spin"></i></div>
 				</div>
 			</div>
-			
+
 			<div class="col-md-8">
 				<div class="profile-pic">
 					<img alt="Kimberly Eberz" class="profile-pic" src="{{athlete.profile}}" title="Kimberly Eberz">
 				</div>
 			</div>
-			
+
 		</div>
 
 		<!-- strava div -->
 		<div class="row col-md-12 strava">
 			Strava
 		</div>
-			
-		<!-- strava stats -->	
+
+		<!-- strava stats -->
 		<div class="row strava-content">
-			
+
 			<!-- running data -->
 			<div class="running col-md-6">
 				<div class="sml-title"><span>Running</span></div>
@@ -65,12 +65,14 @@
 							<div class="col-md-8">
 								<div class="count">{{stats.run_count}} Runs</div>
 								<div class="miles">{{stats.run_distance}} Miles</div>
+								<div class="elevation">{{stats.run_elevation}} Meters Elevation</div>
+								<div class="speed">{{stats.run_pace}} Average Pace (Moving Time)</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- This months runs -->
+				<!-- This years runs -->
 				<div  class="animated pop run-panel">
 					<div class="panel-title">This Year</div>
 					<div class="row">
@@ -81,6 +83,8 @@
 							<div class="col-md-8">
 								<div class="count">{{stats.run_count_ytd}} Runs</div>
 								<div class="miles">{{stats.run_distance_ytd}} Miles</div>
+								<div class="elevation">{{stats.run_elevation_ytd}} Meters Elevation</div>
+								<div class="speed">{{stats.run_pace_ytd}} Average Pace (Moving Time)</div>
 							</div>
 						</div>
 					</div>
@@ -97,6 +101,8 @@
 							<div class="col-md-8">
 								<div class="count">{{stats.run_count_all}} Runs</div>
 								<div class="miles">{{stats.run_distance_all}} Miles</div>
+								<div class="elevation">{{stats.run_elevation_all}} Meters Elevation</div>
+								<div class="speed">{{stats.run_pace_all}} Average Pace (Moving Time)</div>
 							</div>
 						</div>
 					</div>
@@ -106,7 +112,7 @@
 
 			<!-- Cycling data -->
 			<div class="cycling col-md-6">
-				
+
 				<div class="sml-title"><span>Cycling</span></div>
 				<!-- This weeks rides -->
 				<div  class="animated pop run-panel">
@@ -119,12 +125,14 @@
 							<div class="col-md-8">
 								<div class="count">{{stats.ride_count}} Rides</div>
 								<div class="miles">{{stats.ride_distance}} Miles</div>
+								<div class="elevation">{{stats.ride_elevation}} Meters Elevation</div>
+								<div class="speed">{{stats.ride_speed}} Average MPH (Moving Time)</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- This months rides -->
+				<!-- This years rides -->
 				<div  class="animated pop run-panel">
 					<div class="panel-title">This Year</div>
 					<div class="row">
@@ -135,6 +143,8 @@
 							<div class="col-md-8">
 								<div class="count">{{stats.ride_count_ytd}} Rides</div>
 								<div class="miles">{{stats.ride_distance_ytd}} Miles</div>
+								<div class="elevation">{{stats.ride_elevation_ytd}} Meters Elevation</div>
+								<div class="speed">{{stats.ride_speed_ytd}} Average MPH (Moving Time)</div>
 							</div>
 						</div>
 					</div>
@@ -151,6 +161,8 @@
 							<div class="col-md-8">
 								<div class="count">{{stats.ride_count_all}} Rides</div>
 								<div class="miles">{{stats.ride_distance_all}} Miles</div>
+								<div class="elevation">{{stats.ride_elevation_all}} Meters Elevation</div>
+								<div class="speed">{{stats.ride_speed_all}} Average MPH (Moving Time)</div>
 							</div>
 						</div>
 					</div>
@@ -163,8 +175,8 @@
 		<div class="row col-md-12 fitbit">
 			Fitbit
 		</div>
-			
-		<!-- fitbit stats -->	
+
+		<!-- fitbit stats -->
 		<div class="row fitbit-content">
 			<div class="col-md-12">
 				<div class="sml-title"><span>Step it up</span></div>
@@ -181,11 +193,11 @@
 							</div>
 						</div>
 					</div>
-					</div>	
+					</div>
 				</div>
 
 				<div class="col-md-3">
-					<div  class="animated pop run-panel">	
+					<div  class="animated pop run-panel">
 						<div class="panel-title">Miles - Today</div>
 							<div class="row">
 							<div class="col-md-12">
@@ -228,7 +240,7 @@
 								<div class="col-md-8">
 									<div class="count">179 BPM</div>
 								</div>
-							
+
 							</div>
 						</div>
 					</div>
@@ -237,9 +249,9 @@
 			</div>
 
 		</div>
-		
+
 	</div>
-	
+
 
 </body>
 
@@ -254,7 +266,7 @@
 	<script type="text/javascript" src="{{ url_for('static', filename='jquery-animate.js') }}"></script>
 
 
-	<script type="text/javascript" src="{{ url_for('static', filename='jquery.simpleWeather.min.js') }}"></script>	
+	<script type="text/javascript" src="{{ url_for('static', filename='jquery.simpleWeather.min.js') }}"></script>
 
 
 	<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>

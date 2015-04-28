@@ -93,12 +93,7 @@ body {
 }
 
 
-.count {
-	font-size: 1.7em;
-	padding: 10px 20px 10px 20px;
-}
-
-.miles {
+.count, .miles, .elevation, .speed {
 	font-size: 1.7em;
 	padding: 10px 20px 10px 20px;
 }
@@ -133,7 +128,7 @@ body {
 
 }
 span {
-    display: inline-block;    
+    display: inline-block;
 }
 span:before,
 span:after {
@@ -147,8 +142,8 @@ span:after {
     top: .8em;
 }
 span:after {
-   right: 0;  
-   left: auto; 
+   right: 0;
+   left: auto;
 }
 
 .animated {
