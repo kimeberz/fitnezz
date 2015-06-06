@@ -73,33 +73,69 @@ body {
 
 }
 
-.run-panel {
-	border: 2px solid #E0E4E5;
-	background-color: white;
-	border-radius: 3px;
-	margin: 30px 10px 30px 10px;
-	/*padding: 20px;*/
+/*-------*/
 
+body {
+	max-width: 1250px;
+	background-color: #F8F8F8;
+	margin-left: auto;
+	margin-right: auto;
+	color: #6D7C8A;
+	font-family: HelveticaNeue;
+	font-weight: lighter;
+}
+
+.panel {
+  border: 1px solid #E0E4E5;
+  /*padding: 20px;*/
+  background-color: white;
 }
 
 .panel-title {
-	border-bottom: 2px solid #A7C9E0;
-	font-size: 1.4em;
-	text-decoration: uppercase;
-	padding: 10px 20px 10px 0px;
-	margin-left: 20px;
-	margin-right: 20px;
+  border-bottom: 2px solid #A6C9E1; 
+  padding: 10px;
+  font-size: 23px;
+  text-decoration: uppercase;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
+.icon-title {
+  padding-left: 15px;
+}
+
+.stats {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.stat-block {
+  flex: 50%;
+  padding: 15px 0;
+}
+.stat-label {
+  font-family: "HelveticaNeue-UltraLight"; 
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.stat-value {
+  font-size: 23px;
 }
 
 
-.count {
+
+
+/*.count, .miles, .elevation, .speed {
 	font-size: 1.7em;
 	padding: 10px 20px 10px 20px;
-}
+}*/
 
-.miles {
-	font-size: 1.7em;
+.fitcount {
 	padding: 10px 20px 10px 20px;
 }
 
@@ -133,10 +169,10 @@ body {
 
 }
 span {
-    display: inline-block;    
+    display: inline-block;
 }
-span:before,
-span:after {
+.top-title:before,
+.top-title:after {
     border-top: 1px solid #D4D9D9;
     display: block;
     height: 1px;
@@ -146,9 +182,13 @@ span:after {
     left: 0;
     top: .8em;
 }
-span:after {
-   right: 0;  
-   left: auto; 
+.top-title:after {
+   right: 0;
+   left: auto;
+}
+
+.top-title {
+	padding-bottom: 15px;
 }
 
 .animated {

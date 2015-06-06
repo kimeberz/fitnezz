@@ -1,0 +1,4 @@
+export CLIENT_ID=<Your Client Key from https://www.strava.com/developers>
+export CLIENT_SECRET=<Your Client Secret from https://www.strava.com/developers>
+export SECRET_KEY=<Your Access Token from https://www.strava.com/developers>
+export HOSTNAME=http://127.0.0.1:5000
