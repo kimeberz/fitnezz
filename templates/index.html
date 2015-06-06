@@ -52,118 +52,172 @@
 
 			<!-- running data -->
 			<div class="running col-md-6">
-				<div class="sml-title"><span>Running</span></div>
+				<div class="sml-title"><span class="top-title">Running</span></div>
 
 				<!-- This weeks runs -->
-				<div class="pop animated run-panel">
-					<div class="panel-title">Recent Runs</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="pull-left icon run col-md-4">
-								<i class="fa fa-dashboard fa-4x"></i>
-							</div>
-							<div class="col-md-8">
-								<div class="count">{{stats.run_count}} Runs</div>
-								<div class="miles">{{stats.run_distance}} Miles</div>
-								<div class="elevation">{{stats.run_elevation}} Meters Elevation</div>
-								<div class="speed">{{stats.run_pace}} Average Pace (Moving Time)</div>
-							</div>
+				<div class="pop animated panel">
+					<div class="panel-title">
+						<i class="fa fa-dashboard fa-2x"></i>
+						<span class="icon-title">Runs - Recent</span>
+					</div>
+					<div class="stats">
+						<div class="stat-block">
+								<div class="stat-value count">{{stats.run_count}}</div>
+								<div class="stat-label">Runs</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value miles">{{stats.run_distance}} Mi</div>
+								<div class="stat-label">Total Distance</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value elevation">{{stats.run_elevation}} Mtrs</div>
+								<div class="stat-label">Total Elevation</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value speed">{{stats.run_pace}}/Mi</div>
+								<div class="stat-label">Avg Pace</div>
+							
 						</div>
 					</div>
 				</div>
 
 				<!-- This years runs -->
-				<div  class="animated pop run-panel">
-					<div class="panel-title">This Year</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="pull-left icon col-md-4">
-								<i class="fa fa-dashboard fa-4x"></i>
-							</div>
-							<div class="col-md-8">
-								<div class="count">{{stats.run_count_ytd}} Runs</div>
-								<div class="miles">{{stats.run_distance_ytd}} Miles</div>
-								<div class="elevation">{{stats.run_elevation_ytd}} Meters Elevation</div>
-								<div class="speed">{{stats.run_pace_ytd}} Average Pace (Moving Time)</div>
-							</div>
+				<div class="pop animated panel">
+					<div class="panel-title">
+						<i class="fa fa-dashboard fa-2x"></i>
+						<span class="icon-title">Runs - This Year</span>
+					</div>
+					<div class="stats">
+						<div class="stat-block">
+								<div class="stat-value count">{{stats.run_count_ytd}}</div>
+								<div class="stat-label">Runs</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value miles">{{stats.run_distance_ytd}} Mi</div>
+								<div class="stat-label">Total Distance</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value elevation">{{stats.run_elevation_ytd}} Mtrs</div>
+								<div class="stat-label">Total Elevation</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value speed">{{stats.run_pace_ytd}}/Mi</div>
+								<div class="stat-label">Avg Pace</div>
+							
 						</div>
 					</div>
 				</div>
 
 				<!-- runs - all time -->
-				<div  class="animated pop run-panel">
-					<div class="panel-title">All Time</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="pull-left icon col-md-4">
-								<i class="fa fa-flash fa-4x"></i>
-							</div>
-							<div class="col-md-8">
-								<div class="count">{{stats.run_count_all}} Runs</div>
-								<div class="miles">{{stats.run_distance_all}} Miles</div>
-								<div class="elevation">{{stats.run_elevation_all}} Meters Elevation</div>
-								<div class="speed">{{stats.run_pace_all}} Average Pace (Moving Time)</div>
-							</div>
+				<div class="pop animated panel">
+					<div class="panel-title">
+						<i class="fa fa-dashboard fa-2x"></i>
+						<span class="icon-title">Runs - All Time</span>
+					</div>
+					<div class="stats">
+						<div class="stat-block">
+								<div class="stat-value count">{{stats.run_count_all}}</div>
+								<div class="stat-label">Runs</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value miles">{{stats.run_distance_all}} Mi</div>
+								<div class="stat-label">Total Distance</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value elevation">{{stats.run_elevation_all}} Mtrs</div>
+								<div class="stat-label">Total Elevation</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value speed">{{stats.run_pace_all}}/Mi</div>
+								<div class="stat-label">Avg Pace</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 
 			<!-- Cycling data -->
 			<div class="cycling col-md-6">
 
-				<div class="sml-title"><span>Cycling</span></div>
-				<!-- This weeks rides -->
-				<div  class="animated pop run-panel">
-					<div class="panel-title">Recent Rides</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="pull-left icon col-md-4">
-								<i class="fa fa-bicycle fa-4x"></i>
-							</div>
-							<div class="col-md-8">
-								<div class="count">{{stats.ride_count}} Rides</div>
-								<div class="miles">{{stats.ride_distance}} Miles</div>
-								<div class="elevation">{{stats.ride_elevation}} Meters Elevation</div>
-								<div class="speed">{{stats.ride_speed}} Average MPH (Moving Time)</div>
-							</div>
+				<div class="sml-title"><span class="top-title">Cycling</span></div>
+				
+
+				<!-- This weeks Rides -->
+				<div class="pop animated panel">
+					<div class="panel-title">
+						<i class="fa fa-bicycle fa-2x"></i>
+						<span class="icon-title">Rides - Recent</span>
+					</div>
+					<div class="stats">
+						<div class="stat-block">
+								<div class="stat-value count">{{stats.ride_count}}</div>
+								<div class="stat-label">Rides</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value miles">{{stats.ride_distance}} Mi</div>
+								<div class="stat-label">Total Distance</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value elevation">{{stats.ride_elevation}} Mtrs</div>
+								<div class="stat-label">Total Elevation</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value speed">{{stats.ride_speed}} Avg MPH</div>
+								<div class="stat-label">Moving Time</div>
+							
 						</div>
 					</div>
 				</div>
 
-				<!-- This years rides -->
-				<div  class="animated pop run-panel">
-					<div class="panel-title">This Year</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="pull-left icon col-md-4">
-								<i class="fa fa-bicycle fa-4x"></i>
-							</div>
-							<div class="col-md-8">
-								<div class="count">{{stats.ride_count_ytd}} Rides</div>
-								<div class="miles">{{stats.ride_distance_ytd}} Miles</div>
-								<div class="elevation">{{stats.ride_elevation_ytd}} Meters Elevation</div>
-								<div class="speed">{{stats.ride_speed_ytd}} Average MPH (Moving Time)</div>
-							</div>
+				<!-- This years Rides -->
+				<div class="pop animated panel">
+					<div class="panel-title">
+						<i class="fa fa-bicycle fa-2x"></i>
+						<span class="icon-title">Rides - This Year</span>
+					</div>
+					<div class="stats">
+						<div class="stat-block">
+								<div class="stat-value count">{{stats.ride_count_ytd}}</div>
+								<div class="stat-label">Rides</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value miles">{{stats.ride_distance_ytd}} Mi</div>
+								<div class="stat-label">Total Distance</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value elevation">{{stats.ride_elevation_ytd}} Mtrs</div>
+								<div class="stat-label">Total Elevation</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value speed">{{stats.ride_speed_ytd}} Avg MPH</div>
+								<div class="stat-label">Moving Time</div>
+							
 						</div>
 					</div>
 				</div>
 
-				<!-- rides - all time -->
-				<div  class="animated pop run-panel">
-					<div class="panel-title">All Time</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="pull-left icon col-md-4">
-								<i class="fa fa-bomb fa-4x"></i>
-							</div>
-							<div class="col-md-8">
-								<div class="count">{{stats.ride_count_all}} Rides</div>
-								<div class="miles">{{stats.ride_distance_all}} Miles</div>
-								<div class="elevation">{{stats.ride_elevation_all}} Meters Elevation</div>
-								<div class="speed">{{stats.ride_speed_all}} Average MPH (Moving Time)</div>
-							</div>
+				<!-- Rides All Time -->
+				<div class="pop animated panel">
+					<div class="panel-title">
+						<i class="fa fa-bomb fa-2x"></i>
+						<span class="icon-title">Rides - All Time</span>
+					</div>
+					<div class="stats">
+						<div class="stat-block">
+								<div class="stat-value count">{{stats.ride_count_all}}</div>
+								<div class="stat-label">Rides</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value miles">{{stats.ride_distance_all}} Mi</div>
+								<div class="stat-label">Total Distance</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value elevation">{{stats.ride_elevation_all}} Mtrs</div>
+								<div class="stat-label">Total Elevation</div>
+						</div>
+						<div class="stat-block">
+								<div class="stat-value speed">{{stats.ride_speed_all}} Avg MPH</div>
+								<div class="stat-label">Moving Time</div>
+							
 						</div>
 					</div>
 				</div>
@@ -179,9 +233,9 @@
 		<!-- fitbit stats -->
 		<div class="row fitbit-content">
 			<div class="col-md-12">
-				<div class="sml-title"><span>Step it up</span></div>
+				<div class="sml-title"><span class="top-title">Step it up</span></div>
 				<div class="col-md-3">
-					<div  class="animated pop run-panel">
+					<div  class="animated pop panel">
 						<div class="panel-title">Steps - Today</div>
 						<div class="row">
 						<div class="col-md-12">
@@ -189,7 +243,7 @@
 								<i class="fa fa-bicycle fa-4x"></i>
 							</div>
 							<div class="col-md-8">
-								<div class="count">20,000 Steps</div>
+								<div class="fitcount stat-value">20,000 Steps</div>
 							</div>
 						</div>
 					</div>
@@ -197,7 +251,7 @@
 				</div>
 
 				<div class="col-md-3">
-					<div  class="animated pop run-panel">
+					<div  class="animated pop panel">
 						<div class="panel-title">Miles - Today</div>
 							<div class="row">
 							<div class="col-md-12">
@@ -205,7 +259,7 @@
 									<i class="fa fa-map-marker fa-4x"></i>
 								</div>
 								<div class="col-md-8">
-									<div class="count">9 Miles</div>
+									<div class="fitcount stat-value">9 Miles</div>
 								</div>
 								</div>
 							</div>
@@ -213,7 +267,7 @@
 				</div>
 
 				<div class="col-md-3">
-					<div  class="animated pop run-panel">
+					<div  class="animated pop panel">
 						<div class="panel-title">Resting Heartrate - Today</div>
 						<div class="row">
 							<div class="col-md-12">
@@ -221,7 +275,7 @@
 									<i class="fa fa-bed fa-4x"></i>
 								</div>
 								<div class="col-md-8">
-									<div class="count">49 BPM</div>
+									<div class="fitcount stat-value">49 BPM</div>
 								</div>
 							</div>
 						</div>
@@ -229,7 +283,7 @@
 				</div>
 
 				<div class="col-md-3">
-					<div class="animated pop run-panel">
+					<div class="animated pop panel">
 						<div class="panel-title">Max Heartrate - Today</div>
 						<div class="row">
 							<div class="col-md-12">
@@ -238,7 +292,7 @@
 									<!-- fa-fire -->
 								</div>
 								<div class="col-md-8">
-									<div class="count">179 BPM</div>
+									<div class="fitcount stat-value">179 BPM</div>
 								</div>
 
 							</div>

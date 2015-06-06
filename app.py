@@ -29,33 +29,36 @@ def index():
     stats_mi = {
         'run_distance': m_to_mi(stats_m['recent_run_totals']['distance']),
         'run_count': stats_m['recent_run_totals']['count'],
-        'run_elevation': stats_m['recent_run_totals']['elevation_gain'],
+        'run_elevation': el(stats_m['recent_run_totals']['elevation_gain']),
         'run_pace': average_pace(stats_m['recent_run_totals']['distance'], stats_m['recent_run_totals']['moving_time']),
         'run_distance_ytd': m_to_mi(stats_m['ytd_run_totals']['distance']),
         'run_count_ytd': stats_m['ytd_run_totals']['count'],
-        'run_elevation_ytd': stats_m['ytd_run_totals']['elevation_gain'],
+        'run_elevation_ytd': el(stats_m['ytd_run_totals']['elevation_gain']),
         'run_pace_ytd': average_pace(stats_m['ytd_run_totals']['distance'], stats_m['ytd_run_totals']['moving_time']),
         'run_distance_all': m_to_mi(stats_m['all_run_totals']['distance']),
         'run_count_all': stats_m['all_run_totals']['count'],
-        'run_elevation_all': stats_m['all_run_totals']['elevation_gain'],
+        'run_elevation_all': el(stats_m['all_run_totals']['elevation_gain']),
         'run_pace_all': average_pace(stats_m['all_run_totals']['distance'], stats_m['all_run_totals']['moving_time']),
         'ride_distance': m_to_mi(stats_m['recent_ride_totals']['distance']),
         'ride_count': stats_m['recent_ride_totals']['count'],
-        'ride_elevation': stats_m['recent_ride_totals']['elevation_gain'],
+        'ride_elevation': el(stats_m['recent_ride_totals']['elevation_gain']),
         'ride_speed': average_mph(stats_m['recent_ride_totals']['distance'], stats_m['recent_ride_totals']['moving_time']),
         'ride_distance_ytd': m_to_mi(stats_m['ytd_ride_totals']['distance']),
         'ride_count_ytd': stats_m['ytd_ride_totals']['count'],
-        'ride_elevation_ytd': stats_m['ytd_ride_totals']['elevation_gain'],
+        'ride_elevation_ytd': el(stats_m['ytd_ride_totals']['elevation_gain']),
         'ride_speed_ytd': average_mph(stats_m['ytd_ride_totals']['distance'], stats_m['ytd_ride_totals']['moving_time']),
         'ride_distance_all': m_to_mi(stats_m['all_ride_totals']['distance']),
         'ride_count_all': stats_m['all_ride_totals']['count'],
-        'ride_elevation_all': stats_m['all_ride_totals']['elevation_gain'],
+        'ride_elevation_all': el(stats_m['all_ride_totals']['elevation_gain']),
         'ride_speed_all': average_mph(stats_m['all_ride_totals']['distance'], stats_m['all_ride_totals']['moving_time']),
     }
     # raise Exception(stats_mi['run_distance'])
 
     return render_template('index.html', athlete=athlete, stats=stats_mi, athlete_id=athlete)
 
+
+def el(meters):
+    return round(meters ,2)
 
 def m_to_mi(m):
     return round(m * 0.000621371 ,2)
