@@ -6,11 +6,6 @@ body {
 	color: #6D7C8A;
 	font-family: HelveticaNeue-Light;
 	font-weight: lighter;
-
-}
-
-.container {
-	max-width: 1250px !important;
 }
 
 .row {
@@ -30,15 +25,15 @@ body {
 	color: #FF434C;
 }
 
-.fa-bicycle {
+.fa-bicycle, .fa-paw {
 	color: #00A79D;
 }
 
-.fa-dashboard {
+.fa-dashboard, .fa-cloud {
 	color: #A7C9E0;
 }
 
-.fa-flash {
+.fa-flash, .fa-sun-o {
 	color: #F1C148;
 }
 
@@ -57,9 +52,12 @@ body {
 
 .profile {
 	font-size: 2em;
-	font-family: HelveticaNeue-Light;
 	float: left;
+}
 
+.profile-pic {
+  border-radius: 50%;
+  text-align: right;
 }
 
 .loc {
@@ -67,27 +65,8 @@ body {
 	font-size: .7em
 }
 
-.profile-pic {
-  border-radius: 50%;
-  text-align: right;
-
-}
-
-/*-------*/
-
-body {
-	max-width: 1250px;
-	background-color: #F8F8F8;
-	margin-left: auto;
-	margin-right: auto;
-	color: #6D7C8A;
-	font-family: HelveticaNeue;
-	font-weight: lighter;
-}
-
 .panel {
   border: 1px solid #E0E4E5;
-  /*padding: 20px;*/
   background-color: white;
 }
 
@@ -118,8 +97,7 @@ body {
   padding: 15px 0;
 }
 .stat-label {
-  font-family: "HelveticaNeue-UltraLight"; 
-  font-weight: normal;
+  font-family: "HelveticaNeue-Thin"; 
   font-size: 18px;
 }
 
@@ -127,30 +105,19 @@ body {
   font-size: 23px;
 }
 
-
-
-
-/*.count, .miles, .elevation, .speed {
-	font-size: 1.7em;
-	padding: 10px 20px 10px 20px;
-}*/
-
 .fitcount {
 	padding: 10px 20px 10px 20px;
 }
 
 .fitbit {
 	background-color: #3EA3A6;
-	font-size: 1.6em;
-	text-align: center;
-	color: white;
-	text-transform: uppercase;
-	padding: 20px 0px 20px 0px;
-
 }
 
 .strava {
 	background-color: #FC4C02;
+}
+
+.strava, .fitbit {
 	font-size: 1.6em;
 	text-align: center;
 	color: white;
